@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Penggunaan Iframe</title>
+</head>
+<body>
+<h2>C.Soal Latihan/Tugas</h2>
+
+<p>1. Apa gunanya IFRAME?</p>
+IFRAME (Inline Frame) adalah elemen HTML yang digunakan untuk menampilkan halaman web atau dokumen HTML lain di dalam halaman web utama. IFRAME berguna untuk mengintegrasikan atau menanamkan konten dari sumber eksternal ke dalam halaman web Anda. Misalnya, Anda dapat menggunakan IFRAME untuk menampilkan video YouTube, peta Google Maps, atau halaman web eksternal lainnya di dalam halaman web Anda.
+
+<p>2. Apa bedanya FRAME dan IFRAME?</p>
+Perbedaan utama antara FRAME dan IFRAME adalah sebagai berikut:
+   - FRAME: FRAME digunakan dalam HTML versi lama (HTML 4 dan sebelumnya) untuk membagi sebuah halaman web menjadi beberapa frame atau jendela terpisah. FRAME memungkinkan Anda untuk menampilkan beberapa dokumen HTML dalam satu halaman web, dan setiap frame dapat memiliki konten yang berbeda. Namun, penggunaan FRAME telah dianggap usang, dan IFRAME lebih disarankan untuk penggunaan modern.
+   - IFRAME: IFRAME digunakan dalam HTML5 dan versi HTML yang lebih baru untuk menanamkan halaman web atau konten eksternal di dalam halaman web utama. IFRAME bekerja dalam satu frame saja dan dapat menampilkan konten eksternal, seperti video, peta, atau halaman web lainnya, secara terintegrasi dalam halaman web.
+
+<p>3. Tuliskan bentuk umum perintah IFRAME secara lengkap?</p>
+Perintah IFRAME memiliki bentuk umum sebagai berikut:
+
+html
+<iframe src="animegif.gif" width="lebar" height="tinggi" frameborder="0" scrolling="auto"></iframe>
+
+Penjelasan atribut-atributnya:
+- `src`: Atribut ini digunakan untuk menentukan URL sumber eksternal yang akan ditampilkan dalam IFRAME.
+- `width` dan `height`: Atribut-atribut ini digunakan untuk mengatur lebar dan tinggi IFRAME.
+- `frameborder`: Atribut ini digunakan untuk mengontrol tampilan bingkai (frame) IFRAME. Biasanya diatur ke "0" untuk menghilangkan bingkai.
+- `scrolling`: Atribut ini mengontrol apakah IFRAME harus memiliki bilah geser. Nilainya bisa "auto" (secara otomatis menampilkan bilah geser jika diperlukan) atau "no" (tanpa bilah geser).
+
+<p>4. Berikan contoh dalam bentuk tampilan website penggunaan IFRAME?</p>
+Berikut adalah contoh penggunaan IFRAME untuk menampilkan Google Maps di dalam halaman web:
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh IFRAME Google Maps</title>
+</head>
+<body>
+    <h1>Peta Google Maps</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15503.172408591728!2d-122.08218176402811!3d37.42341348530177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807f24a37363%3A0x430d90d9e12be98f!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1575525910146!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</body>
+</html>
+
+
+Dalam contoh di atas, IFRAME digunakan untuk menanamkan peta Google Maps dengan lebar 600 piksel dan tinggi 450 piksel. URL sumber eksternal Google Maps diberikan dalam atribut `src`. Peta ditampilkan di dalam halaman web sebagai konten terintegrasi.
+</body>
+</html>

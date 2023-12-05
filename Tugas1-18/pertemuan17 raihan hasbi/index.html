@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Deret Bilangan Genap Habis Dibagi 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .result p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Deret Bilangan Genap Habis Dibagi 3</h1>
+        <div class="input-group">
+            <label for="start">Nilai Awal:</label>
+            <input type="number" id="start">
+        </div>
+        <div class="input-group">
+            <label for="end">Nilai Akhir:</label>
+            <input type="number" id="end">
+        </div>
+        <button onclick="generateSeries()">Generate</button>
+        <div class="result">
+            <p>Deret yang tampil:</p>
+            <p id="series"></p>
+            <p>Jumlah deret bilangan: <span id="count"></span> bilangan</p>
+            <p>Jumlah nilai bilangan tersebut: <span id="sum"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function generateSeries() {
+            var start = parseInt(document.getElementById("start").value);
+            var end = parseInt(document.getElementById("end").value);
+            var series = "";
+            var count = 0;
+            var sum = 0;
+
+            for (var i = start; i <= end; i++) {
+                if (i % 2 === 0 && i % 3 === 0) {
+                    series += i + " ";
+                    count++;
+                    sum += i;
+                }
+            }
+
+            document.getElementById("series").textContent = series;
+            document.getElementById("count").textContent = count;
+            document.getElementById("sum").textContent = sum;
+        }
+    </script>
+</body>
+
+</html>

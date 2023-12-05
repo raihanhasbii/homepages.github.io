@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kalkulator Luas Trapesium</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        .input-group input {
+            width: 200px;
+        }
+
+        .btn-calculate {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Menghitung Luas Trapesium</h1>
+
+    <div class="input-group">
+        <label>Garis Atas:</label>
+        <input type="number" id="garis-atas" min="0" step="any" required>
+    </div>
+
+    <div class="input-group">
+        <label>Garis Bawah:</label>
+        <input type="number" id="garis-bawah" min="0" step="any" required>
+    </div>
+
+    <div class="input-group">
+        <label>Tinggi:</label>
+        <input type="number" id="tinggi" min="0" step="any" required>
+    </div>
+
+    <button class="btn-calculate" onclick="calculateLuas()">Hitung Luas</button>
+
+    <div class="result">
+        <p id="luas-trapesium"></p>
+    </div>
+
+    <script>
+        function calculateLuas() {
+            var garisAtas = parseFloat(document.getElementById("garis-atas").value);
+            var garisBawah = parseFloat(document.getElementById("garis-bawah").value);
+            var tinggi = parseFloat(document.getElementById("tinggi").value);
+
+            var luas = ((garisAtas + garisBawah) * tinggi) / 2;
+
+            document.getElementById("luas-trapesium").innerText = "Luas: " + luas.toFixed(2) + " Cm2";
+        }
+    </script>
+</body>
+
+</html>

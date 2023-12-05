@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Pilihan</title>
+</head>
+<body>
+    <h1>Menu Pilihan</h1>
+    <ul>
+        <li><a href="#" onclick="showCalculator()">[1] Menghitung Kalkulator</a></li>
+        <li><a href="#" onclick="showTrapesium()">[2] Menghitung Luas Trapesium</a></li>
+        <li><a href="#" onclick="showNumberSeries()">[3] Menghitung Deret</a></li>
+    </ul>
+
+    <div id="calculator" style="display: none;">
+        <h2>Kalkulator</h2>
+        <input type="number" id="num1" placeholder="Angka pertama">
+        <input type="number" id="num2" placeholder="Angka kedua">
+        <button onclick="calculate()">Hitung</button>
+        <p id="result"></p>
+    </div>
+
+    <div id="trapesium" style="display: none;">
+        <h2>Luas Trapesium</h2>
+        <input type="number" id="base1" placeholder="Panjang sisi atas">
+        <input type="number" id="base2" placeholder="Panjang sisi bawah">
+        <input type="number" id="height" placeholder="Tinggi">
+        <button onclick="calculateTrapesium()">Hitung</button>
+        <p id="resultTrapesium"></p>
+    </div>
+
+    <div id="numberSeries" style="display: none;">
+        <h2>Deret Bilangan</h2>
+        <input type="number" id="start" placeholder="Angka awal">
+        <input type="number" id="increment" placeholder="Increment">
+        <input type="number" id="n" placeholder="Jumlah suku">
+        <button onclick="generateNumberSeries()">Hitung</button>
+        <p id="resultNumberSeries"></p>
+    </div>
+
+    <script>
+        function showCalculator() {
+            document.getElementById("calculator").style.display = "block";
+            document.getElementById("trapesium").style.display = "none";
+            document.getElementById("numberSeries").style.display = "none";
+        }
+
+        function showTrapesium() {
+            document.getElementById("calculator").style.display = "none";
+            document.getElementById("trapesium").style.display = "block";
+            document.getElementById("numberSeries").style.display = "none";
+        }
+
+        function showNumberSeries() {
+            document.getElementById("calculator").style.display = "none";
+            document.getElementById("trapesium").style.display = "none";
+            document.getElementById("numberSeries").style.display = "block";
+        }
+
+        function calculate() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 + num2;
+            document.getElementById("result").innerHTML = "Hasil: " + result;
+        }
+
+        function calculateTrapesium() {
+            var base1 = parseFloat(document.getElementById("base1").value);
+            var base2 = parseFloat(document.getElementById("base2").value);
+            var height = parseFloat(document.getElementById("height").value);
+            var resultTrapesium = (base1 + base2) * height / 2;
+            document.getElementById("resultTrapesium").innerHTML = "Luas Trapesium: " + resultTrapesium;
+        }
+
+        function generateNumberSeries() {
+            var start = parseInt(document.getElementById("start").value);
+            var increment = parseInt(document.getElementById("increment").value);
+            var n = parseInt(document.getElementById("n").value);
+            var resultNumberSeries = "";
+            for (var i = 0; i < n; i++) {
+                resultNumberSeries += start + ", ";
+                start += increment;
+            }
+            document.getElementById("resultNumberSeries").innerHTML = "Deret Bilangan: " + resultNumberSeries;
+        }
+    </script>
+</body>
+</html>

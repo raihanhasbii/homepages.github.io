@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+/* CSS untuk tampilan umum */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    z-index: 999;
+    /* untuk memastikan navbar muncul di atas konten lainnya */
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.navbar li {
+    margin-left: 10px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border: 1px transparent;
+    border-radius: 8px;
+}
+
+.navbar li a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s ease;
+}
+
+/* CSS untuk elemen parallax */
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-content {
+    /* CSS lainnya */
+    box-shadow: 7px 5px 10px 1px rgba(0, 0, 0, 0.58);
+    -webkit-box-shadow: 7px 5px 10px 1px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 7px 5px 10px 1px rgba(0, 0, 0, 0.58);
+    padding: 100px 50px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.15);
+    /* Menambahkan efek blur */
+}
+
+.parallax-content h1 {
+    font-weight: 700;
+}
+
+
+.content-a {
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: blue;
+    padding: 10px 16px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.parallax-content2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CSS untuk card */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.card-content {
+    margin-bottom: 10px;
+}
+
+.card-content h2 {
+    color: black;
+}
+
+.card-content p {
+    color: black;
+}
+
+.card-action {
+    text-align: center;
+}
+
+/* CSS untuk tombol biru */
+.blue-button {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+img {
+    width: 140%;
+    height: 100%;
+}

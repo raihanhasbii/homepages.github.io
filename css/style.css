@@ -1,0 +1,361 @@
+/* boostrep icon */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
+:root {
+  --primary: #545454;
+  --bg: #202020;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #5d8aa6;
+}
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 7%;
+  background-color: rgb(41, 41, 41);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #b3b3b3;
+}
+
+.navbar .navbar-logo span {
+  color: #545454;
+}
+
+.navbar .navbar-nav a {
+  color: #b3b3b3;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: " ";
+  display: block;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #b3b3b3;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#fitur-menu {
+  display: none;
+}
+
+/* Hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/hutan.1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(33, 33, 33, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  color: #202020;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content p {
+  font-size: 1.3rem;
+  margin-top: 0.7rem;
+  line-height: 1.4;
+  color: #b3b3b3;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  color: #b3b3b3;
+  background-color: #7b7e81;
+  border-radius: 0.8rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* About section  */
+.about,
+.tugas,
+.contact {
+  padding: 6rem 7% 1.4rem;
+  margin-bottom: 5rem;
+}
+
+.about h2,
+.tugas h2,
+.contact h2 {
+  color: #b3b3b3;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.tugas h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row,
+.about-img {
+  flex: 1 1 40rem;
+}
+
+.about .row .about-img img {
+  margin-left: 30%;
+}
+
+.about .row .about-img img {
+  width: 65%;
+}
+
+.about .row .content {
+  flex: 1 1 40rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  color: #b3b3b3;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  color: #fff;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 50;
+  line-height: 1.6;
+}
+
+/* tugas section */
+.tugas {
+  margin-bottom: 20%;
+}
+.tugas h2,
+.contact h2 {
+  margin-bottom: 0.5rem;
+}
+.tugas p,
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+}
+
+.dropdown {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 1.5rem; /* Tambahkan jarak bawah */
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.dropdown:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Tambahkan CSS untuk bagian tugas */
+#tugas {
+  margin-top: 30px;
+}
+
+#tugas p {
+  margin-bottom: 20px;
+}
+
+#task-display {
+  margin-top: 20px;
+  margin-bottom: 1.5rem; /* Tambahkan jarak bawah */
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+/* contact section */
+footer {
+  background-color: #292929;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: var(--primary); /* Ganti warna saat hover */
+}
+
+/* Efek untuk ikon sosial media */
+footer i {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+/* media queris */
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #fitur-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--bg);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0%;
+  }
+
+  .navbar .navbar-nav a {
+    color: #d3d3d3;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
